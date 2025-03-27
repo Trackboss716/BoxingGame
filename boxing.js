@@ -6,4 +6,4 @@ let player1 = {
         name: "Player 2",
         health: 100,
         };
-            let currentPlayer =
+            let currentPlayer 
