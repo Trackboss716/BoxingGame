@@ -19,15 +19,15 @@ let player1 = {
 
 
                 function applyDamage(opponent, damage) {
-                    if (/* FILL CONDITIONAL HERE */) {
+                    if (damage < 6 ) {
                     console.log(`${currentPlayer.name} lands a basic hit on ${opponent.name}!`);
-                    } else if (/* FILL CONDITIONAL HERE */) {
+                    } else if (damage >= 6 && damage <= 9    ) {
                     console.log(`${currentPlayer.name} lands a critical hit on ${opponent.name}!`);
                     } else {
                     console.log(`${currentPlayer.name} lands a KNOCKOUT on ${opponent.name}!🥊`);
                     }
                     opponent.health -= damage;
-                    if (opponent.health < 0 || /* FILL CONDITIONAL HERE */) {
+                    if (opponent.health < 0 || damage === 10) {
                     // Ensure health doesn't go below 0 and automatic KO
                     opponent.health = 0;
                     }
@@ -36,7 +36,7 @@ let player1 = {
 
 
                     function checkKnockout(opponent) {
-                        if ( opponent /* fill conditional here */) {
+                        if ( opponent.health===0) {
                         console.log(`${opponent.name} has been knocked out!`);
                         console.log(`${currentPlayer.name} is the WINNER! 🏆`);
                         return true; // Game over
